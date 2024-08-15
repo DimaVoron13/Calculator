@@ -37,4 +37,5 @@ public class Controller {
     public String divide(@RequestParam(value = "num1", required = false) Float one, @RequestParam(value = "num2", required = false) Float two) {
         return calculatorService.divide(one, two);
     }
+
 }
