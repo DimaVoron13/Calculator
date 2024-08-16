@@ -24,7 +24,9 @@ public class ServiceCalcImpl implements CalculatorService {
         if (singNull(one, two).equals("noNull")) {
             Float result = one + two;
             resultString = one + " + " + two + " = " + result;
-        } else resultString = singNull(one, two);
+        } else {
+            resultString = singNull(one, two);
+        }
         return resultString;
     }
 
@@ -34,7 +36,9 @@ public class ServiceCalcImpl implements CalculatorService {
         if (singNull(one, two).equals("noNull")) {
             Float result = one - two;
             resultString = one + " - " + two + " = " + result;
-        } else resultString = singNull(one, two);
+        } else {
+            resultString = singNull(one, two);
+        }
         return resultString;
     }
 
@@ -44,7 +48,9 @@ public class ServiceCalcImpl implements CalculatorService {
         if (singNull(one, two).equals("noNull")) {
             Float result = one * two;
             resultString = one + " * " + two + " = " + result;
-        } else resultString = singNull(one, two);
+        } else {
+            resultString = singNull(one, two);
+        }
         return resultString;
     }
 
@@ -52,13 +58,11 @@ public class ServiceCalcImpl implements CalculatorService {
         String resultCalculation = "";
         String resultString = "";
         if (singNull(one, two).equals("noNull")) {
-            if (two == 0) {
                 resultString = "Недопустимое значение делителя равным нулю. На ноль делить нельзя";
             } else {
                 Float result = one / two;
                 resultString = one + " / " + two + " = " + result;
             }
-        } else resultString = singNull(one, two);
         return resultString;
     }
 }
